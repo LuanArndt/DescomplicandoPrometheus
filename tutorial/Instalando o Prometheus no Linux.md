@@ -1,6 +1,6 @@
 # Instalação do Prometheus no Linux
 
-1- Pegar o link de download da versão deseja no site so Prometheus (https://prometheus.io/download/);
+1- Pegar o link de download da versão desejada no site so Prometheus (https://prometheus.io/download/);
 
 <br/>
 

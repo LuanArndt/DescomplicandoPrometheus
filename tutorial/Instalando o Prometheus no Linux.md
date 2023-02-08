@@ -96,3 +96,5 @@ OBS: a flag --now vai fazer com que o serviço seja habilitado e ja iniciado.
 ```
 systemctl status prometheus
 ```
+
+14 - Feito isso é so testar o acesso pelo `http://localhost:9090` ou apontando para o IP do servidor, em caso de acesso externo. 

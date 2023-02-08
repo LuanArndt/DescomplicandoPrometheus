@@ -28,7 +28,7 @@ sudo mv promtool /usr/local/bin/promtool
 
 <br/>
 
-5 - Criar o diretorio de configuração e mover os arquivos de configuração de biblioteca para la:
+5 - Criar o diretorio de configuração e mover os arquivos de configuração e biblioteca para lá:
 ```
 sudo mkdir /etc/prometheus
 sudo mv prometheus.yml /etc/prometheus/

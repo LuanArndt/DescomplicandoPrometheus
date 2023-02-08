@@ -1,3 +1,6 @@
+# Esse arquivo fica em /etc/systemd/system/
+# Após qualquer alteração nesse arquivo é necessario dar reload no daemon do Linux: systemctl daemon-reload
+
 [Unit]
 Description=Prometheus
 Documentation=https://prometheus.io/docs/introduction/overview/

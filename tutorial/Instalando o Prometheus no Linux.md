@@ -38,7 +38,7 @@ sudo mv console_libraries /etc/prometheus
 
 <br/>
 
-6 - Editar o arquivo de configuração do prometheus conforme [/conf/prometheus.yml](/conf/prometheus.yml);
+6 - Editar o arquivo de configuração do Prometheus conforme [/conf/prometheus.yml](/conf/prometheus.yml);
 
 <br/>
 
@@ -96,5 +96,7 @@ OBS: a flag --now vai fazer com que o serviço seja habilitado e ja iniciado.
 ```
 systemctl status prometheus
 ```
+
+<br>
 
 14 - Feito isso é so testar o acesso pelo `http://localhost:9090` ou apontando para o IP do servidor, em caso de acesso externo. 

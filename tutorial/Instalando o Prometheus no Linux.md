@@ -1,6 +1,6 @@
 # Instalação do Prometheus no Linux
 
-1- Pegar o link de download da versão deseja no site so Prometheus (https://prometheus.io/download/).  
+1- Pegar o link de download da versão deseja no site so Prometheus (https://prometheus.io/download/);
 
 <br/>
 
@@ -38,7 +38,7 @@ sudo mv console_libraries /etc/prometheus
 
 <br/>
 
-6 - Editar o arquivo de configuração do prometheus conforme [/conf/prometheus.yml](/conf/prometheus.yml)
+6 - Editar o arquivo de configuração do prometheus conforme [/conf/prometheus.yml](/conf/prometheus.yml);
 
 <br/>
 
@@ -72,11 +72,11 @@ sudo chown -R prometheus:prometheus /usr/local/bin/promtool
 nano /etc/systemd/system/promtetheus.service
 ```
 
-E deixar o conteudo conforme [/conf/prometheus.service](/conf/prometheus.service)
+E deixar o conteudo conforme [/conf/prometheus.service](/conf/prometheus.service).
 
 <br/>
 
-11 - Reiniciar o daemon do Linux
+11 - Reiniciar o daemon do Linux:
 ```
 systemctl daemon-reload
 ```
@@ -84,7 +84,7 @@ systemctl daemon-reload
 <br>
 
 
-12 - Dar enable no serviço e inicia-lo
+12 - Dar enable no serviço e inicia-lo:
 ```
 systemctl enable protheus --now
 ```

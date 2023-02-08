@@ -1,0 +1,8 @@
+FROM python:3.8-slim
+LABEL maintainer="Luan Gabriel Arndt <luan.arndt@gmail.com>"
+
+WORKDIR /app
+COPY . /app
+RUN pip3 install -r requeriments.txt
+
+CMD python3 exporter.py

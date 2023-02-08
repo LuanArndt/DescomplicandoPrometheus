@@ -1,13 +1,13 @@
 # Instalação do Prometheus no Linux
 
-1- Pegar o link de download da versão deseja no site so Prometheus (https://prometheus.io/download/).
+1- Pegar o link de download da versão deseja no site so Prometheus (https://prometheus.io/download/).  
 
 2- Baixar o arquivo no linux:
 
 ```
 wget https://github.com/prometheus/prometheus/releases/download/v2.37.5/prometheus-2.37.5.linux-amd64.tar.gz
 ```
-
+  
 
 3 - Descompactar:
 ```

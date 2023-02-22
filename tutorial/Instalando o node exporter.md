@@ -52,3 +52,19 @@ node_exporter, version 1.5.0 (branch: HEAD, revision: 1b48970ffcf5630534fb00bb06
 nano /etc/systemd/system/node_exporter.service
 ```
 Colocando o conteudo de [/conf/node_exporter.service](https://github.com/LuanArndt/DescomplicandoPrometheus/blob/main/conf/node_exporter.service)
+
+<br>
+
+7 - Dar reload no daemon:
+```
+systemctl daemon-reload
+```
+
+<br>
+
+8 - Habilitar e iniciar o serviço:
+```
+systemctl enable node_exporter --now
+```
+
+9 - Editar o `/etc/prometheus/prometheus.yml` com apontando para o servidor com node_exporter pela porta 9100.

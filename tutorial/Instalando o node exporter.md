@@ -69,4 +69,4 @@ systemctl enable node_exporter --now
 
 <br>
 
-9 - Editar o `/etc/prometheus/prometheus.yml` com apontando para o servidor com node_exporter pela porta 9100.
+9 - Editar o `/etc/prometheus/prometheus.yml` e criar um novo job apontando para o servidor com node_exporter pela porta 9100.

@@ -70,3 +70,71 @@ systemctl enable node_exporter --now
 <br>
 
 9 - Editar o `/etc/prometheus/prometheus.yml` e criar um novo job apontando para o servidor com node_exporter pela porta 9100.
+
+<br>
+
+# Habilitando novos coletores
+
+1 - Criar o diretorio e arquivo de configuração do node_exporter:
+```
+mkdir /etc/node_exporter
+nano /etc/node_exporter/node_exporter_options
+```
+
+<br>
+
+2 - Criar a variavel com o coletor a ser habilitado, inserindo o conteúdo abaixo no arquivo:
+```
+OPTIONS="--collector.systemd"
+```
+
+<br>
+
+3 - Dar o owner da pasta criada, para o usuario e grupo do node exporter:
+```
+sudo chown -R node_exporter:node_exporter /etc/node_exporter/
+```
+
+<br>
+
+4 - Editar o arquivo do serviço `(/etc/systemd/system/node_exporter.service)`, colocando o `EnvironmentFile` apontando para o arquivo de configuração criado:
+```
+[Service]
+...
+EnvironmentFile=/etc/node_exporter/node_exporter_options
+```
+
+<br>
+
+5 - Ainda no arquivo do serviço, adicionar o `$OPTIONS` (Variavel que criamos dentro do arquivo de configuração) ao final do `ExecStart`.
+```
+ExecStart=/usr/local/bin/node_exporter $OPTIONS
+```
+
+<br>
+
+Ao final, o arquivo de serviço ficará assim:
+```
+[Unit]
+Description=Node Exporter
+Wants=network-online.target
+After=network-online.target
+
+[Service]
+User=node_exporter
+Group=node_exporter
+Type=simple
+EnvironmentFile=/etc/node_exporter/node_exporter_options
+ExecStart=/usr/local/bin/node_exporter $OPTIONS
+
+[Install]
+WantedBy=multi-user.target
+```
+
+<br>
+
+6 - Reiniciar o deamon e o node exporter:
+```
+sudo systemctl daemon-reload
+sudo systemctl restart node_exporter
+```

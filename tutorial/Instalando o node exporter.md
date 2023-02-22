@@ -51,4 +51,4 @@ node_exporter, version 1.5.0 (branch: HEAD, revision: 1b48970ffcf5630534fb00bb06
 ```
 nano /etc/systemd/system/node_exporter.service
 ```
-Colocando o conteudo de [/conf/node_exporter.service](main/conf/node_exporter.service)
+Colocando o conteudo de [/conf/node_exporter.service](DescomplicandoPrometheus/conf/node_exporter.service)

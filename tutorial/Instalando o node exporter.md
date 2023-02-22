@@ -1,6 +1,6 @@
 # Instalando o node exporter
 
-1 - Ir no repositorio node_exporter do github do Prometheus. Em relases `+(https://github.com/prometheus/node_exporter/releases)`, encontrar e baixar a versão compativel com o cliente:
+1 - Ir no repositorio node_exporter do github do Prometheus. Em relases `(https://github.com/prometheus/node_exporter/releases)`, encontrar e baixar a versão compativel com o cliente:
 
 ```
 wget https://github.com/prometheus/node_exporter/releases/download/v1.5.0/node_exporter-1.5.0.linux-amd64.tar.gz
@@ -51,4 +51,4 @@ node_exporter, version 1.5.0 (branch: HEAD, revision: 1b48970ffcf5630534fb00bb06
 ```
 nano /etc/systemd/system/node_exporter.service
 ```
-Colocando o conteudo de [/conf/node_exporter.service](DescomplicandoPrometheus/conf/node_exporter.service)
+Colocando o conteudo de [/conf/node_exporter.service](https://github.com/LuanArndt/DescomplicandoPrometheus/blob/main/conf/node_exporter.service)

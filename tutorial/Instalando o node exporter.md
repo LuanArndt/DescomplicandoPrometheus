@@ -36,3 +36,19 @@ node_exporter, version 1.5.0 (branch: HEAD, revision: 1b48970ffcf5630534fb00bb06
   go version:       go1.19.3
   platform:         linux/amd64
 ```
+
+<br>
+
+5 - Criar um grupo e um usuario para executar o binario:
+```
+ addgroup --system node_exporter
+ adduser --shel /sbin/nologin --system --group node_exporter
+```
+
+<br>
+
+6 - Criar um serviço:
+```
+nano /etc/systemd/system/node_exporter.service
+```
+Colocando o conteudo de [/conf/node_exporter.service](conf/node_exporter.service)

@@ -69,7 +69,7 @@ sudo chown -R prometheus:prometheus /usr/local/bin/promtool
 
 10 - Para fazer com que o Prometheus rode como serviço, precisamos criar o arquivo `/etc/systemd/system/promtetheus.service`:
 ```
-nano /etc/systemd/system/promtetheus.service
+nano /etc/systemd/system/prometheus.service
 ```
 
 E deixar o conteudo conforme [/conf/prometheus.service](/conf/prometheus.service).
